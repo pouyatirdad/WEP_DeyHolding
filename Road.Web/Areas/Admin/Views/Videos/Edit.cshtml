@@ -1,0 +1,97 @@
+﻿@model Road.Core.Models.Video
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "form", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.FileName)
+        @Html.HiddenFor(model => model.InsertDate)
+        @Html.HiddenFor(model => model.InsertUser)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-4" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4">ویدیو</label>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="image-input image-input-outline" id="gallery-image">
+                    <video width="320" height="240" controls>
+                        <source src="~/Files/Videos/@Model.FileName" type="video/mp4">
+                    </video>
+                    <input type="file" name="File" id="video" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div style="float:left">
+                <button type="submit" class="btn btn-primary mr-2">ثبت</button>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+<style>
+    .image-input .image-input-wrapper {
+        width: 200px;
+    }
+</style>
+<script>
+    $.validator.unobtrusive.parse("#form");
+    new KTImageInput('gallery-image');
+</script>
+@*<script>
+        $("#form").submit(function (e) {
+            console.log("triggered")
+            e.preventDefault();
+            var video = $('#video').get(0).files[0];
+            var formData = new FormData();
+            formData.append('file', video);
+            var id = $('#Id').val();
+            formData.append('id', id);
+            var Title = $('#Title').val();
+            formData.append('Title', Title);
+            $.ajax(
+                {
+                    url: "/Admin/Videos/Edit/",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    type: "POST",
+                    xhr: function () {
+                        var xhr = new window.XMLHttpRequest();
+                        xhr.upload.addEventListener("progress", function (evt) {
+                            if (evt.lengthComputable) {
+                                var progress = Math.round((evt.loaded / evt.total) * 100);
+                                console.log(progress);
+                                $(".progress").show();
+                                $(".progress-bar").css("width", progress + "%").attr("aria-valuenow", progress);
+                                $(".progress-bar").html(progress + "%");
+                            }
+                        }, false);
+                        return xhr;
+                    },
+                    success: function (data) {
+                        console.log(data.message);
+                        $(".progress").hide();
+                        $("#upload-status").html(data.message);
+                        $("#upload-status").show();
+                    }
+                }
+            );
+        });
+    </script>*@
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

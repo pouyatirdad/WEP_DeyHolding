@@ -1,0 +1,242 @@
+﻿@using Road.Core.Utility
+@model Road.Core.Models.StaticContent
+@{
+    ViewBag.Title = "درباره ما";
+    //var ourMission = Model.FirstOrDefault(s => s.Id == (int)StaticContents.OurMission);
+    //var bestQuality = Model.FirstOrDefault(s => s.Id == (int)StaticContents.BestQuality);
+    //var onTime = Model.FirstOrDefault(s => s.Id == (int)StaticContents.OnTime);
+    //var experianced = Model.FirstOrDefault(s => s.Id == (int)StaticContents.Experienced);
+    //var about = Model.FirstOrDefault(s => s.Id == (int)StaticContents.About);
+    //var counters = Model.Where(s => s.StaticContentTypeId == (int)StaticContentTypes.Counter);
+}
+<div class="row-iconbox">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="themesflat-spacer clearfix" data-desktop="61" data-mobile="60" data-smobile="60"></div>
+                <div class="themesflat-headings style-1 text-center clearfix">
+                    <h2 class="heading">ویژگی های ما</h2>
+                    <div class="sep has-icon width-125 clearfix">
+                        <div class="sep-icon">
+                            <span class="sep-icon-before sep-center sep-solid"></span>
+                            <span class="icon-wrap"><i class="fas fa-question-circle"></i></span>
+                            <span class="sep-icon-after sep-center sep-solid"></span>
+                        </div>
+                    </div>
+                    <p class="sub-heading"></p>
+                </div>
+                <div class="themesflat-spacer clearfix" data-desktop="42" data-mobile="35" data-smobile="35"></div>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+
+        <div class="row">
+            <div class="col span_1_of_3">
+                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0" data-smobile="35"></div>
+                <div class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 bg-white-column padding-inner clearfix">
+                    <div class="icon-wrap">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="text-wrap">
+                        <h5 class="heading">@Model.Feature1</h5>
+                        <div class="sep clearfix"></div>
+                        <p class="sub-heading">@Model.Feature1Des</p>
+                    </div>
+                </div><!-- /.themesflat-icon-box -->
+                <div class="divider h35"></div>
+            </div><!-- /.col-md-3 -->
+
+            <div class="col span_1_of_3">
+                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0" data-smobile="35"></div>
+                <div class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 bg-white-column padding-inner clearfix">
+                    <div class="icon-wrap">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="text-wrap">
+                        <h5 class="heading">@Model.Feature2</h5>
+                        <div class="sep clearfix"></div>
+                        <p class="sub-heading">@Model.Feature2Des</p>
+                    </div>
+                </div><!-- /.themesflat-icon-box -->
+                <div class="divider h35"></div>
+            </div><!-- /.col-md-3 -->
+            <div class="col span_1_of_3">
+                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="35" data-smobile="35"></div>
+                <div class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 bg-white-column padding-inner clearfix">
+                    <div class="icon-wrap">
+                        <i class="autora-icon-time"></i>
+                    </div>
+                    <div class="text-wrap">
+                        <h5 class="heading">@Model.Feature3</h5>
+                        <div class="sep clearfix"></div>
+                        <p class="sub-heading">@Model.Feature3Des</p>
+                    </div>
+                </div><!-- /.themesflat-icon-box -->
+            </div><!-- /.col-md-3 -->
+            <div class="col span_1_of_3">
+                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="35" data-smobile="35"></div>
+                <div class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 bg-white-column padding-inner clearfix">
+                    <div class="icon-wrap">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="text-wrap">
+                        <h5 class="heading">@Model.Feature4</h5>
+                        <div class="sep clearfix"></div>
+                        <p class="sub-heading">@Model.Feature4Des</p>
+                    </div>
+                </div><!-- /.themesflat-icon-box -->
+            </div><!-- /.col-md-3 -->
+        </div><!-- /.row -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="themesflat-spacer clearfix" data-desktop="41" data-mobile="35" data-smobile="35"></div>
+                <div class="themesflat-spacer clearfix" data-desktop="73" data-mobile="60" data-smobile="60"></div>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div>
+<!-- ABOUT -->
+<div class="row-about">
+    <div class="container-fluid">
+        <div class="row equalize sm-equalize-auto">
+            <div class="col-md-12 bg-light-grey">
+                <div class="themesflat-spacer clearfix" data-desktop="64" data-mobile="35" data-smobile="35"></div>
+                <div class="themesflat-content-box clearfix" data-margin="0 4.5% 0 4.5%" data-mobilemargin="0 2.5% 0 2.5%">
+                    <div class="themesflat-headings style-1 clearfix">
+                        <h2 class="heading">درباره ما</h2>
+                        @*<div class="sep has-width w80 accent-bg margin-top-11 clearfix"></div>*@
+                        <p class="sub-heading margin-top-30">@Model.AboutUs</p>
+                    </div>
+                    <div class="themesflat-spacer clearfix" data-desktop="26" data-mobile="35" data-smobile="35"></div>
+                    <div class="themesflat-spacer clearfix" data-desktop="42" data-mobile="35" data-smobile="35"></div>
+                </div><!-- /.themesflat-content-box -->
+                <div class="themesflat-spacer clearfix" data-desktop="76" data-mobile="60" data-smobile="60"></div>
+            </div><!-- /.col-md-6 -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- END ABOUT -->
+<!-- COUNTER -->
+<div class="row-counter parallax parallax-4 parallax-overlay">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="themesflat-spacer clearfix" data-desktop="92" data-mobile="60" data-smobile="60"></div>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+        <div class="themesflat-row gutter-30 separator light clearfix">
+
+            <div class="col span_1_of_3">
+                <div class="themesflat-content-box clearfix" data-margin="0 0 0 0" data-mobilemargin="0 0 0 0">
+                    <div class="themesflat-counter style-1 align-center clearfix">
+                        <div class="counter-item">
+                            <div class="inner">
+                                <div class="text-wrap">
+                                    <div class="number-wrap">
+                                        <span class="number" data-speed="2000" data-to="@(Model.Counter1Num)" data-inviewport="yes">@Model.Counter1Num</span><span class="suffix">+</span>
+                                    </div>
+                                    <h3 class="heading margin-right-18">@Model.Counter1Text</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="35" data-smobile="35"></div>
+            </div>
+            <div class="col span_1_of_3">
+                <div class="themesflat-content-box clearfix" data-margin="0 0 0 0" data-mobilemargin="0 0 0 0">
+                    <div class="themesflat-counter style-1 align-center clearfix">
+                        <div class="counter-item">
+                            <div class="inner">
+                                <div class="text-wrap">
+                                    <div class="number-wrap">
+                                        <span class="number" data-speed="2000" data-to="@(Model.Counter2Num)" data-inviewport="yes">@Model.Counter2Num</span><span class="suffix">+</span>
+                                    </div>
+                                    <h3 class="heading margin-right-18">@Model.Counter2Text</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="35" data-smobile="35"></div>
+            </div>
+            <div class="col span_1_of_3">
+                <div class="themesflat-content-box clearfix" data-margin="0 0 0 0" data-mobilemargin="0 0 0 0">
+                    <div class="themesflat-counter style-1 align-center clearfix">
+                        <div class="counter-item">
+                            <div class="inner">
+                                <div class="text-wrap">
+                                    <div class="number-wrap">
+                                        <span class="number" data-speed="2000" data-to="@(Model.Counter3Num)" data-inviewport="yes">@Model.Counter3Num</span><span class="suffix">+</span>
+                                    </div>
+                                    <h3 class="heading margin-right-18">@Model.Counter3Text</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="35" data-smobile="35"></div>
+            </div>
+            <div class="col span_1_of_3">
+                <div class="themesflat-content-box clearfix" data-margin="0 0 0 0" data-mobilemargin="0 0 0 0">
+                    <div class="themesflat-counter style-1 align-center clearfix">
+                        <div class="counter-item">
+                            <div class="inner">
+                                <div class="text-wrap">
+                                    <div class="number-wrap">
+                                        <span class="number" data-speed="2000" data-to="@(Model.Counter4Num)" data-inviewport="yes">@Model.Counter4Num</span><span class="suffix">+</span>
+                                    </div>
+                                    <h3 class="heading margin-right-18">@Model.Counter4Text</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="35" data-smobile="35"></div>
+            </div>
+
+        </div><!-- /.row -->
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="themesflat-spacer clearfix" data-desktop="72" data-mobile="60" data-smobile="60"></div>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+
+    </div><!-- /.container -->
+    <div class="bg-parallax-overlay overlay-black style2"></div>
+</div>
+
+<!-- END COUNTER -->
+<!-- TABS -->
+@*@Html.Action("FaqSection")*@
+<!-- TABS -->
+<!-- END TABS -->
+<!-- PARTNER -->
+@Html.Action("PartnersSection")
+<!-- END PARTNER -->
+<!-- QUOTE -->
+@*<div class="row-quote bg-row-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="themesflat-spacer clearfix" data-desktop="38" data-mobile="35" data-smobile="35"></div>
+                <div class="themesflat-quote style-1 clearfix">
+                    <div class="quote-item">
+                        <div class="inner">
+                            <div class="heading-wrap">
+                                <h3 class="heading">شروع به اجرای محصول کنید</h3>
+                            </div>
+                            <div class="button-wrap has-icon icon-left">
+                                <a href="#" class="themesflat-button bg-white small"><span>@ViewBag.Phone<span class="icon"><i class="autora-icon-phone-contact"></i></span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="themesflat-spacer clearfix" data-desktop="33" data-mobile="35" data-smobile="35"></div>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div>*@
+<!-- END QUOTE -->
+<!-- TEAM -->
+    @Html.Action("OurTeam","Home")

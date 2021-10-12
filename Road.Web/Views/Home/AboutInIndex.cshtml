@@ -1,0 +1,32 @@
+﻿@using Road.Core.Utility
+@model Road.Core.Models.StaticContent
+@{
+//var ourMission = Model.FirstOrDefault(s => s.Id == (int)StaticContents.OurMission);
+//var bestQuality = Model.FirstOrDefault(s => s.Id == (int)StaticContents.BestQuality);
+//var onTime = Model.FirstOrDefault(s => s.Id == (int)StaticContents.OnTime);
+//var experianced = Model.FirstOrDefault(s => s.Id == (int)StaticContents.Experienced);
+//var about = Model.FirstOrDefault(s => s.Id == (int)StaticContents.About);
+//var counters = Model.Where(s => s.StaticContentTypeId == (int)StaticContentTypes.Counter);
+}
+
+<div class="row-about">
+    <div class="container-fluid">
+        <div class="row equalize sm-equalize-auto">
+            <div class="col-12 bg-white">
+                <div class="themesflat-spacer clearfix" data-desktop="64" data-mobile="35" data-smobile="35"></div>
+                <div class="themesflat-content-box clearfix" data-margin="0 10%" data-mobilemargin="0 0 0 4.5%">
+                    <div class="themesflat-headings style-1 clearfix">
+                        <h2 class="heading">درباره ما</h2>
+                        <div class="sep has-width w80 accent-bg margin-top-11 clearfix"></div>
+                        <div style=" color: rgb(57 62 70); font-family: 'BYekan' !important; font-size: 17.4px; font-weight: 600;" class="sub-heading margin-top-30">
+                            
+                            @Model.AboutUs
+
+                        </div>
+                    </div>
+                </div><!-- /.themesflat-content-box -->
+                <div class="themesflat-spacer clearfix" data-desktop="76" data-mobile="60" data-smobile="60"></div>
+            </div><!-- /.col-md-6 -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>

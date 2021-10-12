@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "/Views/Shared/_HomeLayout.cshtml";
+    ViewBag.Title = "خانه";
+}
+
+@Html.Action("HomeSlider")
+@*<div style="position:relative;">
+        <a class="PlayBtnForVideo">
+            <i class="fas fa-play PlayIcon"></i>
+            <i class="fas fa-pause PauseIcon"></i>
+        </a>
+        <video muted class="mainVIdeo" style="width:100%;height:100%;">
+            <source src="~/Files/Videos/@ViewBag.VideoOne" type="video/mp4">
+            مرورگر شما از ویدیو پشتیبانی نمی کند.
+        </video>
+    </div>*@
+
+@Html.Action("AboutInIndex")
+
+@Html.Action("AppreciationLetters")
+
+@Html.Action("OutstandingConstruction")
+
+@Html.Action("TestimonialsSection")
+
+@Html.Action("PartnersSection")
+
+@*<div style="position:relative;">
+        <a class="PlayBtnForVideo">
+            <i class="fas fa-play PlayIcon"></i>
+            <i class="fas fa-pause PauseIcon"></i>
+        </a>
+        <video muted class="mainVIdeo" style="width:100%;height:100%;">
+            <source src="~/Files/Videos/@ViewBag.VideoTwo" type="video/mp4">
+            مرورگر شما از ویدیو پشتیبانی نمی کند.
+        </video>
+    </div>*@
+
+@*@Html.Action("ProjectsSection")*@
+@Html.Action("BlogsSection")
+
+@*@Html.Action("socialMedias")*@
+
+@Html.Action("FaqSection")
+
+
+@*@section Scripts {
+        <script>
+
+            $(".mainVIdeo").get(0).play();
+            $(".mainVIdeo").get(1).play();
+
+            $('.mainVIdeo').attr('loop', 'loop');
+
+        </script>
+    }*@
