@@ -484,7 +484,7 @@
   transition: height .2s; }
 
 [data-uppy-theme=dark] .uppy-StatusBar {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-size--md .uppy-StatusBar {
   height: 46px; }
@@ -525,7 +525,7 @@
   border-top: 1px solid #eaeaea; }
 
 [data-uppy-theme=dark] .uppy-StatusBar:not([aria-hidden=true]).is-waiting {
-  background-color: #112D4E;
+  background-color: #001227;
   border-top: 1px solid #333; }
 
 .uppy-StatusBar-progress {
@@ -655,7 +655,7 @@
   background-color: #fafafa; }
 
 [data-uppy-theme=dark] .uppy-StatusBar.is-waiting .uppy-StatusBar-actions {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-StatusBar-actionCircleBtn {
   line-height: 1;
@@ -952,7 +952,7 @@
   background-color: #fff; }
 
 [data-uppy-theme=dark] .uppy-ProviderBrowser-viewType--list {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-ProviderBrowser-viewType--list li.uppy-ProviderBrowserItem {
   display: -ms-flexbox;
@@ -1037,7 +1037,7 @@
   transform: rotate(45deg); }
 
 [data-uppy-theme=dark] .uppy-ProviderBrowserItem-fakeCheckbox {
-  background-color: #112D4E;
+  background-color: #001227;
   border-color: #939393; }
 
 [data-uppy-theme=dark] .uppy-ProviderBrowserItem-fakeCheckbox--is-checked {
@@ -1058,7 +1058,7 @@
   flex: 1; }
 
 [data-uppy-theme=dark] .uppy-DashboardContent-panelBody {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-Provider-auth, .uppy-Provider-empty, .uppy-Provider-error, .uppy-Provider-loading {
   display: -ms-flexbox;
@@ -1213,7 +1213,7 @@
   align-items: center; }
 
 [data-uppy-theme=dark] .uppy-ProviderBrowser-headerBar {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-ProviderBrowser-headerBar--simple {
   text-align: center;
@@ -1244,7 +1244,7 @@
   align-items: center; }
 
 [data-uppy-theme=dark] .uppy-ProviderBrowser-search {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-ProviderBrowser-searchIcon {
   position: absolute;
@@ -1269,7 +1269,7 @@
   border-radius: 4px; }
 
 [data-uppy-theme=dark] .uppy-ProviderBrowser-searchInput {
-  background-color: #112D4E;
+  background-color: #001227;
   color: #eaeaea; }
 
 .uppy-ProviderBrowser-searchInput:focus {
@@ -1373,7 +1373,7 @@
   padding: 0; }
 
 [data-uppy-theme=dark] .uppy-ProviderBrowser-list {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-ProviderBrowserItem-inner {
   cursor: pointer;
@@ -1396,7 +1396,7 @@
   margin-left: 8px; }
 
 [data-uppy-theme=dark] .uppy-ProviderBrowser-footer {
-  background-color: #112D4E;
+  background-color: #001227;
   border-top: 1px solid #333; }
 
 .uppy-Dashboard-Item-previewInnerWrap {
@@ -1624,7 +1624,7 @@ button.uppy-Dashboard-Item-progressIndicator:focus .uppy-Dashboard-Item-progress
 
 .uppy-Dashboard-Item-action:hover {
   opacity: 1;
-  color: #112D4E; }
+  color: #001227; }
 
 [data-uppy-theme=dark] .uppy-Dashboard-Item-action {
   color: #cfcfcf; }
@@ -1643,7 +1643,7 @@ button.uppy-Dashboard-Item-progressIndicator:focus .uppy-Dashboard-Item-progress
   color: #eaeaea; }
 
 .uppy-Dashboard-Item-action--remove {
-  color: #112D4E;
+  color: #001227;
   opacity: .95; }
 
 .uppy-Dashboard-Item-action--remove:hover {
@@ -1923,7 +1923,7 @@ button.uppy-Dashboard-Item-progressIndicator:focus .uppy-Dashboard-Item-progress
   -webkit-overflow-scrolling: touch; }
 
 [data-uppy-theme=dark] .uppy-Dashboard-FileCard-info {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-Dashboard-FileCard-fieldset {
   font-size: 0;
@@ -1972,7 +1972,7 @@ button.uppy-Dashboard-Item-progressIndicator:focus .uppy-Dashboard-Item-progress
 
 [data-uppy-theme=dark] .uppy-Dashboard-FileCard-actions {
   border-top: 1px solid #333;
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-Dashboard-FileCard-actionsBtn {
   margin-left: 10px; }
@@ -2175,7 +2175,7 @@ button.uppy-Dashboard-Item-progressIndicator:focus .uppy-Dashboard-Item-progress
   z-index: 1002; }
 
 [data-uppy-theme=dark] .uppy-Dashboard-inner {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-Dashboard-innerWrap {
   display: -ms-flexbox;
@@ -2494,7 +2494,7 @@ button.uppy-Dashboard-Item-progressIndicator:focus .uppy-Dashboard-Item-progress
   padding: 0 15px; }
 
 [data-uppy-theme=dark] .uppy-DashboardContent-bar {
-  background-color: #112D4E;
+  background-color: #001227;
   border-bottom: 1px solid #333; }
 
 .uppy-DashboardContent-title {
@@ -2649,8 +2649,8 @@ button.uppy-Dashboard-Item-progressIndicator:focus .uppy-Dashboard-Item-progress
 
 [data-uppy-theme=dark] .uppy-Dashboard-AddFilesPanel {
   background-color: #333;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(35%, #112D4E), to(rgba(31, 31, 31, 0.85)));
-  background: linear-gradient(0deg, #112D4E 35%, rgba(31, 31, 31, 0.85)); }
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(35%, #001227), to(rgba(31, 31, 31, 0.85)));
+  background: linear-gradient(0deg, #001227 35%, rgba(31, 31, 31, 0.85)); }
 
 .uppy-Dashboard--isAddFilesPanelVisible .uppy-Dashboard-files {
   -webkit-filter: blur(2px);
@@ -3005,7 +3005,7 @@ a.uppy-Dashboard-poweredBy {
   flex: 1; }
 
 [data-uppy-theme=dark] .uppy-Url {
-  background-color: #112D4E; }
+  background-color: #001227; }
 
 .uppy-Url-input {
   width: 90%;
@@ -3242,7 +3242,7 @@ a.uppy-Dashboard-poweredBy {
   background-color: #fff; }
 
 [data-uppy-theme=dark] .uppy-ScreenCapture-buttonContainer {
-  background-color: #112D4E;
+  background-color: #001227;
   border-top: 1px solid #333; }
 
 .uppy-ScreenCapture-button {
