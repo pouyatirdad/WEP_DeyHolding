@@ -1360,6 +1360,8 @@
     <Content Include="ckeditor\_source\skins\v2\toolbar.css" />
     <Content Include="ckeditor\_source\themes\default\theme.js" />
     <Content Include="Content\client\assets\img\automobile-hero.jpg" />
+    <Content Include="Content\client\assets\img\bgnew1.jpg" />
+    <Content Include="Content\client\assets\img\bgnew2.jpg" />
     <Content Include="Content\client\assets\img\goto-automov.png" />
     <Content Include="Content\client\assets\img\tirepic.png" />
     <Content Include="Content\client\assets\Main.mp4" />

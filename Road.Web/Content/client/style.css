@@ -352,7 +352,7 @@ h6 a { color: inherit }
 .bg-f7f { background-color: #f7f7f7 !important;}
 .bg-ffc { background-color: #001227 !important;}
 .bg-row-1 { background: url('assets/img/page/bg-quote.jpg') center center no-repeat; background-size: cover; }
-.bg-row-2 {position:relative; background: url('assets/img/automobile-hero.jpg') center center no-repeat; background-size: cover; }
+.bg-row-2 {position:relative; background: url('assets/img/bgnew1.jpg') center center no-repeat; background-size: cover; }
     .bg-row-2:before {
         display: block;
         content: '';
