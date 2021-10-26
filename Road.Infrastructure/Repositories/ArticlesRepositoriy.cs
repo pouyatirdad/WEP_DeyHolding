@@ -44,7 +44,7 @@ namespace Road.Infrastructure.Repositories
 
         public List<ArticleComment> GetArticleComments(int articleId)
         {
-            return _context.ArticleComments.Where(c => c.IsDeleted == false && c.ArticleId == articleId).ToList();
+            return _context.ArticleComments.Where(c => c.IsDeleted == false && c.Show==true && c.ArticleId == articleId).ToList();
         }
         public List<ArticleTag> GetArticleTags(int articleId)
         {

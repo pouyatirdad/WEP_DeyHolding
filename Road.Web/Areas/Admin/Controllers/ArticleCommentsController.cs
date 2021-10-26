@@ -117,5 +117,11 @@ namespace Road.Web.Areas.Admin.Controllers
             _repo.DeleteComment(id);
             return RedirectToAction("Index", new { articleId });
         }
+        [HttpPost]
+        public ActionResult ShowTrue(int id , int artid)
+        {
+            _repo.ShowTrueCm(id);
+            return RedirectToAction("Index", new { articleId = artid });
+        }
     }
 }

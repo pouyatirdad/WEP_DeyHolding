@@ -53,9 +53,25 @@
                                 @if(item.Comment.ParentId == null)
                                 {
                                     <a class='btn btn-primary btn-sm' onclick="@(CheckPermission.Check("articlecommentsanswercomment") ? $"btnAnswerComment({item.Comment.ArticleId},{item.Comment.Id})" : "accessDenied()")">پاسخ دادن</a>
+                                    <a class='btn btn-info btn-sm' onclick=" ShowTrueCms(@item.Comment.Id,@item.Comment.ArticleId) " >
+
+                                        @if (item.Comment.Show==false)
+                                        {
+                                            <span>
+                                                نشان دادن نظر
+                                            </span>
+                                    }
+                                    else
+                                    {
+                                            <span>
+                                                عدم نمایش نظر
+                                            </span>
+                                    }
+
+                                    </a>
                                 }
                             </text>
-                                ).Width(255);
+                                ).Width(300);
                         })
                                 .Sortable()
 
@@ -123,12 +139,32 @@
                 $("#myModalBody").html(result);
             });
         }
-        function btnAnswerComment(articleId,parentCommentId) {
+        function btnAnswerComment(articleId, parentCommentId) {
             $.get("/Admin/ArticleComments/AnswerComment?articleId=" + articleId + "&parentCommentId=" + parentCommentId, function (result) {
                 $("#myModal").modal();
                 $("#myModalLabel").html("پاسخ به کامنت");
                 $("#myModalHeader");
                 $("#myModalBody").html(result);
+            });
+        }
+        function ShowTrueCms(cmid, artid) {
+            console.log("yes");
+            $.ajax({
+                url: "/Admin/ArticleComments/ShowTrue?id=" + cmid + "&artid=" + artid,
+            });
+        }
+        function ShowTrueCms(cmid, artid) {
+            $.ajax({
+                type: "POST",
+                url: "/Admin/ArticleComments/ShowTrue",
+                data: "id=" + cmid + "&artid=" + artid,
+                success: function () {
+                    if (text == "success") {
+
+                    } else {
+                        console.log("خطا");
+                    }
+                }
             });
         }
     </script>

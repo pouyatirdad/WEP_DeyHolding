@@ -30,7 +30,7 @@ namespace Road.Infrastructure.Repositories
         public ArticleComment DeleteComment(int id)
         {
             var comment = _context.ArticleComments.Find(id);
-            var children = _context.ArticleComments.Where(c=>c.ParentId == id).ToList();
+            var children = _context.ArticleComments.Where(c => c.ParentId == id).ToList();
             foreach (var child in children)
             {
                 child.IsDeleted = true;
@@ -41,6 +41,15 @@ namespace Road.Infrastructure.Repositories
             _context.Entry(comment).State = EntityState.Modified;
             _context.SaveChanges();
             _logger.LogEvent(comment.GetType().Name, comment.Id, "Delete");
+            return comment;
+        }
+        public ArticleComment ShowTrueCm(int id)
+        {
+            var comment = _context.ArticleComments.Find(id);
+            comment.Show = !comment.Show;
+            _context.Entry(comment).State = EntityState.Modified;
+            _context.SaveChanges();
+            _logger.LogEvent(comment.GetType().Name, comment.Id, "ShowTrue");
             return comment;
         }
     }

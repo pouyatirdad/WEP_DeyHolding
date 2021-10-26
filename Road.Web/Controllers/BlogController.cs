@@ -130,6 +130,7 @@ namespace Road.Web.Controllers
                     Message = form.Message,
                     AddedDate = DateTime.Now,
                 };
+                comment.Show = false;
                 _repo.AddComment(comment);
                 return RedirectToAction("ContactUsSummary", "Home");
             }
