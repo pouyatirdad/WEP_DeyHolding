@@ -7,13 +7,13 @@ namespace Road.Infrastructure.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class StaticChange : IMigrationMetadata
+    public sealed partial class initDb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(StaticChange));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initDb));
         
         string IMigrationMetadata.Id
         {
-            get { return "202110020758397_StaticChange"; }
+            get { return "202110270636392_initDb"; }
         }
         
         string IMigrationMetadata.Source
