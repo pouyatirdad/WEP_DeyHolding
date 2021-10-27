@@ -1,4 +1,5 @@
 ﻿@model Road.Web.ViewModels.ArticleDetailsViewModel
+@using Road.Web.Recaptcha
 @{
     ViewBag.Title = Model.Title;
     Layout = "/Views/Shared/_BlogLayout.cshtml";
@@ -168,6 +169,10 @@
                 <fieldset class="message-wrap">
                     <textarea id="Message" name="Message" rows="8" tabindex="4" placeholder="پیام*" aria-required="true"></textarea>
                 </fieldset>
+                <span class="wpcf7-form-control-wrap your-message">
+                    @Html.GoogleCaptcha()
+                    @Html.InvalidGoogleCaptchaLabel("Captcha is not valid !")
+                </span>
                 <p class="wrap-submit">
                     <input name="submit" type="submit" id="comment-reply" class="submit" value="ارسال">
                 </p>
@@ -204,13 +209,13 @@
         });
     </script>
     <script>
-    function AnswerComment(parentId, parentName) {
-        $('#answerPerson').html("پاسخ دادن به   " + parentName +"<a class='btn btn-warning text-white' style='margin-right:10px;cursor:pointer' onclick='removePerson()'>حذف</a>");
-        $('#ParentId').val(parentId);
-            }
-    function removePerson() {
-        $('#answerPerson').html("");
-        $('#ParentId').val("");
-    }
+        function AnswerComment(parentId, parentName) {
+            $('#answerPerson').html("پاسخ دادن به   " + parentName + "<a class='btn btn-warning text-white' style='margin-right:10px;cursor:pointer' onclick='removePerson()'>حذف</a>");
+            $('#ParentId').val(parentId);
+        }
+        function removePerson() {
+            $('#answerPerson').html("");
+            $('#ParentId').val("");
+        }
     </script>
 }

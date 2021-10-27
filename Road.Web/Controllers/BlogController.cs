@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Road.Core.Models;
 using Road.Infrastructure.Repositories;
+using Road.Web.Recaptcha;
 using Road.Web.ViewModels;
 
 namespace Road.Web.Controllers
@@ -117,6 +118,7 @@ namespace Road.Web.Controllers
             return View(articleDetailsVm);
         }
         [HttpPost]
+        [ValidateGoogleCaptcha]
         public ActionResult PostComment(CommentFormViewModel form)
         {
             if (ModelState.IsValid)
