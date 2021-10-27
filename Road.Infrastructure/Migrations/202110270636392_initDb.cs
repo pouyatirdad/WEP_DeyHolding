@@ -61,6 +61,7 @@ namespace Road.Infrastructure.Migrations
                         InsertDate = c.DateTime(),
                         UpdateUser = c.String(),
                         UpdateDate = c.DateTime(),
+                        Show = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -215,6 +216,21 @@ namespace Road.Infrastructure.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Permissions", t => t.ParentId)
                 .Index(t => t.ParentId);
+            
+            CreateTable(
+                "dbo.Certificates",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Image = c.String(),
+                        Title = c.String(nullable: false),
+                        InsertUser = c.String(),
+                        InsertDate = c.DateTime(),
+                        UpdateUser = c.String(),
+                        UpdateDate = c.DateTime(),
+                        IsDeleted = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.ContactForms",
@@ -412,37 +428,58 @@ namespace Road.Infrastructure.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.StaticContentDetails",
+                "dbo.Sliders",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Title = c.String(nullable: false, maxLength: 600),
-                        ShortDescription = c.String(),
-                        Description = c.String(),
                         Image = c.String(),
-                        Link = c.String(),
-                        StaticContentTypeId = c.Int(nullable: false),
+                        Title = c.String(nullable: false),
                         InsertUser = c.String(),
                         InsertDate = c.DateTime(),
                         UpdateUser = c.String(),
                         UpdateDate = c.DateTime(),
                         IsDeleted = c.Boolean(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.StaticContentTypes", t => t.StaticContentTypeId, cascadeDelete: true)
-                .Index(t => t.StaticContentTypeId);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.StaticContentTypes",
+                "dbo.StaticContents",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 600),
+                        ImageLogo = c.String(),
+                        Address = c.String(),
+                        Instagram = c.String(),
+                        Facebook = c.String(),
+                        Whatsapp = c.String(),
+                        Email = c.String(),
+                        AboutUs = c.String(),
+                        FooterDesc = c.String(),
+                        Phonenumber = c.String(),
+                        Feature1 = c.String(),
+                        Feature1Des = c.String(),
+                        Feature2 = c.String(),
+                        Feature2Des = c.String(),
+                        Feature3 = c.String(),
+                        Feature3Des = c.String(),
+                        Feature4 = c.String(),
+                        Feature4Des = c.String(),
+                        Counter1Num = c.Int(nullable: false),
+                        Counter1Text = c.String(),
+                        Counter2Num = c.Int(nullable: false),
+                        Counter2Text = c.String(),
+                        Counter3Num = c.Int(nullable: false),
+                        Counter3Text = c.String(),
+                        Counter4Num = c.Int(nullable: false),
+                        Counter4Text = c.String(),
+                        History = c.String(),
+                        CompanyVision = c.String(),
                         InsertUser = c.String(),
                         InsertDate = c.DateTime(),
                         UpdateUser = c.String(),
                         UpdateDate = c.DateTime(),
                         IsDeleted = c.Boolean(nullable: false),
+                        Map = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -464,11 +501,25 @@ namespace Road.Infrastructure.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
+            CreateTable(
+                "dbo.Videos",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Title = c.String(nullable: false),
+                        FileName = c.String(),
+                        InsertUser = c.String(),
+                        InsertDate = c.DateTime(),
+                        UpdateUser = c.String(),
+                        UpdateDate = c.DateTime(),
+                        IsDeleted = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.StaticContentDetails", "StaticContentTypeId", "dbo.StaticContentTypes");
             DropForeignKey("dbo.ServiceIncludes", "ServiceId", "dbo.Services");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.Projects", "ProjectTypeId", "dbo.ProjectTypes");
@@ -487,7 +538,6 @@ namespace Road.Infrastructure.Migrations
             DropForeignKey("dbo.ArticleComments", "ParentId", "dbo.ArticleComments");
             DropForeignKey("dbo.ArticleComments", "ArticleId", "dbo.Articles");
             DropForeignKey("dbo.Articles", "ArticleCategoryId", "dbo.ArticleCategories");
-            DropIndex("dbo.StaticContentDetails", new[] { "StaticContentTypeId" });
             DropIndex("dbo.ServiceIncludes", new[] { "ServiceId" });
             DropIndex("dbo.Projects", new[] { "ProjectTypeId" });
             DropIndex("dbo.ProjectGalleries", new[] { "ProjectId" });
@@ -508,9 +558,10 @@ namespace Road.Infrastructure.Migrations
             DropIndex("dbo.ArticleComments", new[] { "ParentId" });
             DropIndex("dbo.Articles", new[] { "UserId" });
             DropIndex("dbo.Articles", new[] { "ArticleCategoryId" });
+            DropTable("dbo.Videos");
             DropTable("dbo.Testimonials");
-            DropTable("dbo.StaticContentTypes");
-            DropTable("dbo.StaticContentDetails");
+            DropTable("dbo.StaticContents");
+            DropTable("dbo.Sliders");
             DropTable("dbo.Services");
             DropTable("dbo.ServiceIncludes");
             DropTable("dbo.ProjectTypes");
@@ -522,6 +573,7 @@ namespace Road.Infrastructure.Migrations
             DropTable("dbo.Galleries");
             DropTable("dbo.Faqs");
             DropTable("dbo.ContactForms");
+            DropTable("dbo.Certificates");
             DropTable("dbo.Permissions");
             DropTable("dbo.RolePermissions");
             DropTable("dbo.AspNetRoles");

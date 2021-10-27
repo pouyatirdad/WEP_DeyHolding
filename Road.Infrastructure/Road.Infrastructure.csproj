@@ -66,45 +66,9 @@
     <Compile Include="Helpers\ImageResizer.cs" />
     <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="Helpers\PersianCulture.cs" />
-    <Compile Include="Migrations\202109190709565_initDb.cs" />
-    <Compile Include="Migrations\202109190709565_initDb.Designer.cs">
-      <DependentUpon>202109190709565_initDb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202109190715519_videos.cs" />
-    <Compile Include="Migrations\202109190715519_videos.Designer.cs">
-      <DependentUpon>202109190715519_videos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110020704306_staticContent].cs" />
-    <Compile Include="Migrations\202110020704306_staticContent].Designer.cs">
-      <DependentUpon>202110020704306_staticContent].cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110020758397_StaticChange.cs" />
-    <Compile Include="Migrations\202110020758397_StaticChange.Designer.cs">
-      <DependentUpon>202110020758397_StaticChange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110020812531_Certificate.cs" />
-    <Compile Include="Migrations\202110020812531_Certificate.Designer.cs">
-      <DependentUpon>202110020812531_Certificate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110020832072_Slider.cs" />
-    <Compile Include="Migrations\202110020832072_Slider.Designer.cs">
-      <DependentUpon>202110020832072_Slider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110031241138_new.cs" />
-    <Compile Include="Migrations\202110031241138_new.Designer.cs">
-      <DependentUpon>202110031241138_new.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110031342166_addemail.cs" />
-    <Compile Include="Migrations\202110031342166_addemail.Designer.cs">
-      <DependentUpon>202110031342166_addemail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110040652282_addd.cs" />
-    <Compile Include="Migrations\202110040652282_addd.Designer.cs">
-      <DependentUpon>202110040652282_addd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202110261143508_show.cs" />
-    <Compile Include="Migrations\202110261143508_show.Designer.cs">
-      <DependentUpon>202110261143508_show.cs</DependentUpon>
+    <Compile Include="Migrations\202110270636392_initDb.cs" />
+    <Compile Include="Migrations\202110270636392_initDb.Designer.cs">
+      <DependentUpon>202110270636392_initDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyDbContext.cs" />
@@ -144,35 +108,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202109190709565_initDb.resx">
-      <DependentUpon>202109190709565_initDb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109190715519_videos.resx">
-      <DependentUpon>202109190715519_videos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110020704306_staticContent].resx">
-      <DependentUpon>202110020704306_staticContent].cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110020758397_StaticChange.resx">
-      <DependentUpon>202110020758397_StaticChange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110020812531_Certificate.resx">
-      <DependentUpon>202110020812531_Certificate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110020832072_Slider.resx">
-      <DependentUpon>202110020832072_Slider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110031241138_new.resx">
-      <DependentUpon>202110031241138_new.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110031342166_addemail.resx">
-      <DependentUpon>202110031342166_addemail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110040652282_addd.resx">
-      <DependentUpon>202110040652282_addd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202110261143508_show.resx">
-      <DependentUpon>202110261143508_show.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110270636392_initDb.resx">
+      <DependentUpon>202110270636392_initDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

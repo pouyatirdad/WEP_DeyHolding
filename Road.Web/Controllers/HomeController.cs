@@ -8,6 +8,7 @@ using Microsoft.Ajax.Utilities;
 using Road.Core.Models;
 using Road.Core.Utility;
 using Road.Infrastructure.Repositories;
+using Road.Web.Recaptcha;
 using Road.Web.ViewModels;
 
 namespace Road.Web.Controllers
@@ -205,6 +206,7 @@ namespace Road.Web.Controllers
             return PartialView();
         }
         [HttpPost]
+        [ValidateGoogleCaptcha]
         public ActionResult ContactUsForm(ContactForm contactForm)
         {
             if (ModelState.IsValid)
