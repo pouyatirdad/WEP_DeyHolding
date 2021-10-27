@@ -381,8 +381,15 @@
 /* Style 2 */
 .themesflat-project.style-2 .text-wrap { background-color: #f7f7f7; padding: 17px; }
 .themesflat-project.style-2 .heading { font-size: 14px; line-height: 27px; }
-.themesflat-project.style-2 .elm-meta > span { padding: 0px 8px 0px 14px; }
-.themesflat-project.style-2 .elm-meta > span:first-child { padding-left: 0px; }
+.themesflat-project.style-2 .elm-meta > span {
+	padding: 0px 8px 0px 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* number of lines to show */
+	-webkit-box-orient: vertical;
+}
+.themesflat-project.style-2 .elm-meta > span:first-child { padding-left: 0px;  }
 .themesflat-project.style-2 .elm-meta > span:before {content: "";position: absolute;top: 50%;right: 0;transform: translateY(-50%);width: 1px;height: 10px;background-color: #e0e0e0;}
 .themesflat-project.style-2 .elm-meta > span:first-child:before { background-color: transparent; width: 0; height: 0; } 
 .themesflat-project.style-2 .elm-meta a { color: #7a7a7a; line-height: 20px;  }
