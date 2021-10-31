@@ -227,6 +227,37 @@
                                 </div>
                             </li>
                             <li class="menu-item menu-item-submenu"
+                                id="nav_project_control"
+                                aria-haspopup="true"
+                                data-menu-toggle="hover">
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <span class="svg-icon menu-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <rect x="0" y="0" width="24" height="24" />
+                                                <path d="M5,8.6862915 L5,5 L8.6862915,5 L11.5857864,2.10050506 L14.4852814,5 L19,5 L19,9.51471863 L21.4852814,12 L19,14.4852814 L19,19 L14.4852814,19 L11.5857864,21.8994949 L8.6862915,19 L5,19 L5,15.3137085 L1.6862915,12 L5,8.6862915 Z M12,15 C13.6568542,15 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9 C10.3431458,9 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z" fill="#000000" />
+                                            </g>
+                                        </svg>
+                                    </span><span class="menu-text">مدیریت محصولات</span><i class="menu-arrow"></i>
+                                </a>
+                                <div class="menu-submenu" id="subnav_project_control">
+                                    <i class="menu-arrow"></i>
+                                    <ul class="menu-subnav">
+                                        <li class="menu-item" id="nav_item_project_types" aria-haspopup="true">
+                                            <a href="/Admin/ProjectTypes"
+                                               class="menu-link">
+                                                <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">انواع محصول</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" id="nav_item_projects" aria-haspopup="true">
+                                            <a href="/Admin/Projects" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">محصولات</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu-item menu-item-submenu"
                                 id="nav_content_control"
                                 aria-haspopup="true"
                                 data-menu-toggle="hover">
@@ -249,10 +280,10 @@
                                             </a>
                                         </li>
                                         @*<li class="menu-item" id="nav_item_testimonial" aria-haspopup="true">
-            <a href="/Admin/Testimonials" class="menu-link">
-                <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">رضایت مشتریان</span>
-            </a>
-        </li>*@
+                        <a href="/Admin/Testimonials" class="menu-link">
+                            <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">رضایت مشتریان</span>
+                        </a>
+                    </li>*@
                                         <li class="menu-item" id="nav_item_gallery" aria-haspopup="true">
                                             <a href="/Admin/Gallery" class="menu-link">
                                                 <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">گالری تصاویر</span>
@@ -282,37 +313,37 @@
                                 </div>
                             </li>
                             @*<li class="menu-item menu-item-submenu"
-                                id="nav_static_content"
-                                aria-haspopup="true"
-                                data-menu-toggle="hover">
-                                <a href="javascript:;" class="menu-link menu-toggle">
-                                    <span class="svg-icon menu-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <rect x="0" y="0" width="24" height="24"></rect>
-                                                <path d="M10,4 L21,4 C21.5522847,4 22,4.44771525 22,5 L22,7 C22,7.55228475 21.5522847,8 21,8 L10,8 C9.44771525,8 9,7.55228475 9,7 L9,5 C9,4.44771525 9.44771525,4 10,4 Z M10,10 L21,10 C21.5522847,10 22,10.4477153 22,11 L22,13 C22,13.5522847 21.5522847,14 21,14 L10,14 C9.44771525,14 9,13.5522847 9,13 L9,11 C9,10.4477153 9.44771525,10 10,10 Z M10,16 L21,16 C21.5522847,16 22,16.4477153 22,17 L22,19 C22,19.5522847 21.5522847,20 21,20 L10,20 C9.44771525,20 9,19.5522847 9,19 L9,17 C9,16.4477153 9.44771525,16 10,16 Z" fill="#000000"></path>
-                                                <rect fill="#000000" opacity="0.3" x="2" y="4" width="5" height="16" rx="1"></rect>
-                                            </g>
-                                        </svg>
-                                    </span><span class="menu-text">محتوای ایستا</span><i class="menu-arrow"></i>
-                                </a>
-                                <div class="menu-submenu" id="subnav_static_content">
-                                    <i class="menu-arrow"></i>
-                                    <ul class="menu-subnav">
-                                        <li class="menu-item" id="nav_item_content_types" aria-haspopup="true">
-                                            <a href="/Admin/StaticContentTypes"
-                                               class="menu-link">
-                                                <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">انواع محتوا</span>
-                                            </a>
-                                        </li>
-                                        <li class="menu-item" id="nav_item_content" aria-haspopup="true">
-                                            <a href="/Admin/StaticContentDetails" class="menu-link">
-                                                <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">جزئیات محتوا</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>*@
+            id="nav_static_content"
+            aria-haspopup="true"
+            data-menu-toggle="hover">
+            <a href="javascript:;" class="menu-link menu-toggle">
+                <span class="svg-icon menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"></rect>
+                            <path d="M10,4 L21,4 C21.5522847,4 22,4.44771525 22,5 L22,7 C22,7.55228475 21.5522847,8 21,8 L10,8 C9.44771525,8 9,7.55228475 9,7 L9,5 C9,4.44771525 9.44771525,4 10,4 Z M10,10 L21,10 C21.5522847,10 22,10.4477153 22,11 L22,13 C22,13.5522847 21.5522847,14 21,14 L10,14 C9.44771525,14 9,13.5522847 9,13 L9,11 C9,10.4477153 9.44771525,10 10,10 Z M10,16 L21,16 C21.5522847,16 22,16.4477153 22,17 L22,19 C22,19.5522847 21.5522847,20 21,20 L10,20 C9.44771525,20 9,19.5522847 9,19 L9,17 C9,16.4477153 9.44771525,16 10,16 Z" fill="#000000"></path>
+                            <rect fill="#000000" opacity="0.3" x="2" y="4" width="5" height="16" rx="1"></rect>
+                        </g>
+                    </svg>
+                </span><span class="menu-text">محتوای ایستا</span><i class="menu-arrow"></i>
+            </a>
+            <div class="menu-submenu" id="subnav_static_content">
+                <i class="menu-arrow"></i>
+                <ul class="menu-subnav">
+                    <li class="menu-item" id="nav_item_content_types" aria-haspopup="true">
+                        <a href="/Admin/StaticContentTypes"
+                           class="menu-link">
+                            <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">انواع محتوا</span>
+                        </a>
+                    </li>
+                    <li class="menu-item" id="nav_item_content" aria-haspopup="true">
+                        <a href="/Admin/StaticContentDetails" class="menu-link">
+                            <i class="menu-bullet menu-bullet-dot"><span></span></i><span class="menu-text">جزئیات محتوا</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>*@
 
                             <li class="menu-item" id="nav_dashboard" aria-haspopup="true">
                                 <a href="/Admin/StaticContent" class="menu-link">
@@ -344,18 +375,18 @@
                                 </a>
                             </li>
                             <!--<li class="menu-item menu-item-submenu"
-        id="nav_contact_form"
-        aria-haspopup="true"
-        data-menu-toggle="hover">
-        <a href="/Admin/Videos" class="menu-link menu-toggle">
-            <span class="svg-icon menu-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <rect x="0" y="0" width="24" height="24" />
-                        <path d="M5,9 L19,9 C20.1045695,9 21,9.8954305 21,11 L21,20 C21,21.1045695 20.1045695,22 19,22 L5,22 C3.8954305,22 3,21.1045695 3,20 L3,11 C3,9.8954305 3.8954305,9 5,9 Z M18.1444251,10.8396467 L12,14.1481833 L5.85557487,10.8396467 C5.4908718,10.6432681 5.03602525,10.7797221 4.83964668,11.1444251 C4.6432681,11.5091282 4.77972206,11.9639747 5.14442513,12.1603533 L11.6444251,15.6603533 C11.8664074,15.7798822 12.1335926,15.7798822 12.3555749,15.6603533 L18.8555749,12.1603533 C19.2202779,11.9639747 19.3567319,11.5091282 19.1603533,11.1444251 C18.9639747,10.7797221 18.5091282,10.6432681 18.1444251,10.8396467 Z" fill="#000000" />
-                        <path d="M11.1288761,0.733697713 L11.1288761,2.69017121 L9.12120481,2.69017121 C8.84506244,2.69017121 8.62120481,2.91402884 8.62120481,3.19017121 L8.62120481,4.21346991 C8.62120481,4.48961229 8.84506244,4.71346991 9.12120481,4.71346991 L11.1288761,4.71346991 L11.1288761,6.66994341 C11.1288761,6.94608579 11.3527337,7.16994341 11.6288761,7.16994341 C11.7471877,7.16994341 11.8616664,7.12798964 11.951961,7.05154023 L15.4576222,4.08341738 C15.6683723,3.90498251 15.6945689,3.58948575 15.5161341,3.37873564 C15.4982803,3.35764848 15.4787093,3.33807751 15.4576222,3.32022374 L11.951961,0.352100892 C11.7412109,0.173666017 11.4257142,0.199862688 11.2472793,0.410612793 C11.1708299,0.500907473 11.1288761,0.615386087 11.1288761,0.733697713 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(11.959697, 3.661508) rotate(-270.000000) translate(-11.959697, -3.661508) " />
-                    </g>
-                </svg>-->
+    id="nav_contact_form"
+    aria-haspopup="true"
+    data-menu-toggle="hover">
+    <a href="/Admin/Videos" class="menu-link menu-toggle">
+        <span class="svg-icon menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24" />
+                    <path d="M5,9 L19,9 C20.1045695,9 21,9.8954305 21,11 L21,20 C21,21.1045695 20.1045695,22 19,22 L5,22 C3.8954305,22 3,21.1045695 3,20 L3,11 C3,9.8954305 3.8954305,9 5,9 Z M18.1444251,10.8396467 L12,14.1481833 L5.85557487,10.8396467 C5.4908718,10.6432681 5.03602525,10.7797221 4.83964668,11.1444251 C4.6432681,11.5091282 4.77972206,11.9639747 5.14442513,12.1603533 L11.6444251,15.6603533 C11.8664074,15.7798822 12.1335926,15.7798822 12.3555749,15.6603533 L18.8555749,12.1603533 C19.2202779,11.9639747 19.3567319,11.5091282 19.1603533,11.1444251 C18.9639747,10.7797221 18.5091282,10.6432681 18.1444251,10.8396467 Z" fill="#000000" />
+                    <path d="M11.1288761,0.733697713 L11.1288761,2.69017121 L9.12120481,2.69017121 C8.84506244,2.69017121 8.62120481,2.91402884 8.62120481,3.19017121 L8.62120481,4.21346991 C8.62120481,4.48961229 8.84506244,4.71346991 9.12120481,4.71346991 L11.1288761,4.71346991 L11.1288761,6.66994341 C11.1288761,6.94608579 11.3527337,7.16994341 11.6288761,7.16994341 C11.7471877,7.16994341 11.8616664,7.12798964 11.951961,7.05154023 L15.4576222,4.08341738 C15.6683723,3.90498251 15.6945689,3.58948575 15.5161341,3.37873564 C15.4982803,3.35764848 15.4787093,3.33807751 15.4576222,3.32022374 L11.951961,0.352100892 C11.7412109,0.173666017 11.4257142,0.199862688 11.2472793,0.410612793 C11.1708299,0.500907473 11.1288761,0.615386087 11.1288761,0.733697713 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(11.959697, 3.661508) rotate(-270.000000) translate(-11.959697, -3.661508) " />
+                </g>
+            </svg>-->
                             <!--end::Svg Icon-->
                             <!--</span><span class="menu-text">ویدیو ها</span>
         </a>
