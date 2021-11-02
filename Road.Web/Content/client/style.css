@@ -572,7 +572,7 @@ body.page #main-content {padding-top: 0;padding-bottom: 0;}
 -------------------------------------------------------------- */
 #site-header {
     position: relative;
-    background-color: #001227;
+    background-color: #fff;
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
 #site-header-inner { position: relative; }
@@ -594,11 +594,14 @@ body.page #main-content {padding-top: 0;padding-bottom: 0;}
         display: block;
         font-size: 15px;
         font-weight: 600;
-        color: #fefefe;
+        color: #0071A1;
         position: relative;
         line-height: 100px;
         font-family: inherit;
     }
+        #main-nav > ul > li > a:hover {
+            color: #001227;
+        }
 
 /* Sub Menu */
 #main-nav .sub-menu {
@@ -682,7 +685,7 @@ body.page #main-content {padding-top: 0;padding-bottom: 0;}
 /* Style 1 */
 .header-style-1 #site-header #main-nav {position: absolute;left: 0px;top: 50%;z-index: 99;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);}
 .header-style-1.menu-has-search #site-header #main-nav {left: 44px;}
-.header-style-1 #site-header #main-nav > ul > li.current-menu-item > a,
+.header-style-1 #site-header #main-nav > ul > li.current-menu-item > a#site-header
 .header-style-1 #site-header #main-nav > ul > li:hover > a {
     color: #0071A1;
     font-weight: 500;
@@ -702,7 +705,7 @@ body.page #main-content {padding-top: 0;padding-bottom: 0;}
 
 /* Style 3 */
 .header-style-3 #site-header {
-    background-color: #001227;
+    background-color: #fff;
     box-shadow: 0px 3px 10px #00000069;
 }
 .header-style-3 #site-header #site-logo {margin-left: 2px;}
@@ -711,18 +714,18 @@ body.page #main-content {padding-top: 0;padding-bottom: 0;}
 
 .header-style-3 #site-header .header-search-icon,
 .header-style-3 #site-header #main-nav > ul > li > a {
-    color: #fefefe;
+    color: #0071A1;
 }
 .header-style-3 #site-header #main-nav > ul > li.current-menu-item > a,
 .header-style-3 #site-header #main-nav > ul > li:hover > a {
-    color: #0071A1;
+    color: #001227;
 }
 .header-style-3 #site-header .header-search-icon,
 .header-style-3 #main-nav > ul > li > a { line-height: 99px; }
 .header-style-3 #site-header .wrap-inner { padding: 10px 0px; }
 
 .header-style-3 #site-header.is-fixed.is-small {
-    background-color: #001227;
+    background-color: #fff;
 }
 
 /* Absolute */
