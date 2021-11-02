@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Linq;
 using Microsoft.Ajax.Utilities;
 using Road.Core.Models;
 using Road.Core.Utility;
 using Road.Infrastructure.Repositories;
 using Road.Web.Recaptcha;
+using Road.Web.Sitemap;
 using Road.Web.ViewModels;
 
 namespace Road.Web.Controllers
@@ -28,8 +32,11 @@ namespace Road.Web.Controllers
         private readonly ArticleCategoriesRepository _articleCategoriesRepo;
         private readonly OurTeamRepository _ourTeamRepo;
         private readonly VideoRepository _videoRepository;
+        private readonly ArticlesRepository _articlesRepository;
 
-        public HomeController(CertificateRepository certificate, SliderRepository Sliders, StaticContentRepository staticContentRepo, ArticlesRepository article, FaqRepository faqRepo,ProjectsRepository projectRepo,PartnersRepository partnerRepo,TestimonialsRepository testimonialRepo, ContactFormsRepository contactFormRepo, ArticleCategoriesRepository articleCategoriesRepo, OurTeamRepository ourTeamRepo,VideoRepository videoRepository)
+
+        public HomeController(CertificateRepository certificate, SliderRepository Sliders, StaticContentRepository staticContentRepo, ArticlesRepository article, FaqRepository faqRepo,ProjectsRepository projectRepo,PartnersRepository partnerRepo,TestimonialsRepository testimonialRepo, ContactFormsRepository contactFormRepo, ArticleCategoriesRepository articleCategoriesRepo, OurTeamRepository ourTeamRepo,VideoRepository videoRepository
+        , ArticlesRepository articlesRepository)
         {
             _faqRepo = faqRepo;
             _staticContentRepo = staticContentRepo;
@@ -43,12 +50,86 @@ namespace Road.Web.Controllers
             _articleCategoriesRepo = articleCategoriesRepo;
             _ourTeamRepo = ourTeamRepo;
             _videoRepository = videoRepository;
+            _articlesRepository = articlesRepository;
         }
+
+        [Route("sitemap.xml")]
+        public ActionResult SitemapXml()
+        {
+            var sitemapNodes = GetSitemapNodes(this.Url);
+            string xml = GetSitemapDocument(sitemapNodes);
+            return this.Content(xml, "text/xml", Encoding.UTF8);
+        }
+
+        public string GetSitemapDocument(IEnumerable<SitemapNode> sitemapNodes)
+        {
+            XNamespace xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9";
+            XElement root = new XElement(xmlns + "urlset");
+
+            foreach (SitemapNode sitemapNode in sitemapNodes)
+            {
+                XElement urlElement = new XElement(
+                    xmlns + "url",
+                    new XElement(xmlns + "loc", Uri.EscapeUriString(sitemapNode.Url)),
+                    sitemapNode.LastModified == null ? null : new XElement(
+                        xmlns + "lastmod",
+                        sitemapNode.LastModified.Value.ToLocalTime().ToString("yyyy-MM-ddTHH:mm:sszzz")),
+                    sitemapNode.Frequency == null ? null : new XElement(
+                        xmlns + "changefreq",
+                        sitemapNode.Frequency.Value.ToString().ToLowerInvariant()),
+                    sitemapNode.Priority == null ? null : new XElement(
+                        xmlns + "priority",
+                        sitemapNode.Priority.Value.ToString("F1", CultureInfo.InvariantCulture)));
+                root.Add(urlElement);
+            }
+
+            XDocument document = new XDocument(root);
+            return document.ToString();
+        }
+
+
         public ActionResult Index()
         {
             ViewBag.VideoOne = _videoRepository.Get(1).FileName;
             ViewBag.VideoTwo = _videoRepository.Get(3).FileName;
             return View();
+        }
+
+        public IReadOnlyCollection<SitemapNode> GetSitemapNodes(UrlHelper urlHelper)
+        {
+            List<SitemapNode> nodes = new List<SitemapNode>();
+
+            nodes.Add(
+                new SitemapNode()
+                {
+                    Url = urlHelper.Action("Index","Home",null),
+                    Priority = 1
+                });
+            nodes.Add(
+               new SitemapNode()
+               {
+                   Url = urlHelper.Action("Index", "Blog", null),
+                   Priority = 0.9
+               });
+            nodes.Add(
+               new SitemapNode()
+               {
+                   Url = urlHelper.Action("Index", "Gallery", null),
+                   Priority = 0.9
+               });
+
+            foreach (var item in _articlesRepository.GetAll())
+            {
+                nodes.Add(
+                   new SitemapNode()
+                   {
+                       Url = urlHelper.Action("Details","Blog", new { id = item.Id }),
+                       Frequency = SitemapFrequency.Weekly,
+                       Priority = 0.8
+                   });
+            }
+
+            return nodes;
         }
 
         public ActionResult Header()

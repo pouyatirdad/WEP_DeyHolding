@@ -236,6 +236,7 @@
     <Compile Include="Recaptcha\InvalidGoogleCaptchaHelper.cs" />
     <Compile Include="Recaptcha\SiteSettings.cs" />
     <Compile Include="Recaptcha\ValidateGoogleCaptchaAttribute.cs" />
+    <Compile Include="Sitemap\SitemapNode.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\ArticleViewModels.cs" />
